@@ -65,9 +65,13 @@ h1 {
 }
 
 .container {
-  display: grid;
   height: 100%;
+}
+
+.image-wrapper {
+  display: grid;
   place-content: center;
+  height: 100%;
 }
 
 .image {

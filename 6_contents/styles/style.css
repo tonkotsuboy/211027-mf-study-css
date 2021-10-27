@@ -59,14 +59,16 @@ body {
 }
 
 @media (min-width: 600px) {
-  .container {
-    grid-template: 1fr 1fr / 1fr;
+  .title,
+  .link-list {
+    grid-row: 1;
+    grid-column: 1;
+    /* grid-area: 1/1/-1/-1; でもOK */
   }
 
   .title {
     grid-column: 1;
     grid-row: 1;
-    font-size: 16px;
     justify-self: left;
     align-self: start;
   }
@@ -80,17 +82,10 @@ body {
   }
 
   .link-list {
-    justify-content: center;
-    grid-column: 1;
-    grid-row: 1 / span 2;
     place-self: center;
     flex-direction: row;
     gap: 40px;
     font-size: 30px;
-  }
-
-  .footer {
-    grid-row: 2;
   }
 
   .footer address {

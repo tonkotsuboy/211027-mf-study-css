@@ -5,10 +5,6 @@ body {
   font-size: 24px;
 }
 
-.box {
-  aspect-ratio: 16/9;
-}
-
 .video {
   aspect-ratio: 16/9;
   width: 100%;
