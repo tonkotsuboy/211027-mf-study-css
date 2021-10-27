@@ -1,0 +1,99 @@
+html,
+body {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+body {
+  padding: 24px;
+}
+
+.container {
+  display: grid;
+  height: 100%;
+  font-size: 24px;
+  gap: 16px;
+  grid-template: 1fr / 1fr;
+}
+
+.my-box,
+.footer {
+  grid-row: 1;
+  grid-column: 1;
+  /* grid-area: 1/1/-1/-1; でもOK */
+}
+
+.my-box {
+  place-self: center;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.title {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.title .material-icons {
+  font-size: 30px;
+}
+
+.link-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.footer {
+  align-self: flex-end;
+  height: 30px;
+}
+
+.footer address {
+  font-size: 16px;
+  font-style: normal;
+}
+
+@media (min-width: 600px) {
+  .container {
+    grid-template: 1fr 1fr / 1fr;
+  }
+
+  .title {
+    grid-column: 1;
+    grid-row: 1;
+    font-size: 16px;
+    justify-self: left;
+    align-self: start;
+  }
+
+  .title .material-icons {
+    font-size: 16px;
+  }
+
+  .my-box {
+    display: contents;
+  }
+
+  .link-list {
+    justify-content: center;
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    place-self: center;
+    flex-direction: row;
+    gap: 40px;
+    font-size: 30px;
+  }
+
+  .footer {
+    grid-row: 2;
+  }
+
+  .footer address {
+    font-size: 14px;
+  }
+}
