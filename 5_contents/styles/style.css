@@ -67,10 +67,12 @@ body {
   }
 
   .title {
-    grid-column: 1;
-    grid-row: 1;
     justify-self: left;
     align-self: start;
+  }
+
+  .title {
+    font-size: 16px;
   }
 
   .title .material-icons {
